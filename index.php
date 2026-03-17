@@ -20,7 +20,7 @@ $scream->setRating(4);
   <div class="container">
 
     <h1>Movies</h1>
-    <ul class="list-group">
+    <ul class="list-group my-4">
       <?php foreach ($movies as $movie): ?>
       <li class="list-group-item">
         <strong><?php echo $movie->title; ?></strong><br>
@@ -33,7 +33,7 @@ $scream->setRating(4);
         <span class="badge <?php echo $movie->isLongMovie() ? 'bg-danger' : 'bg-success'; ?>">
           <?php echo $movie->isLongMovie() ? 'over two hours long' : 'under two hours long'; ?>
         </span>
-        <span class="badge bg-secondary"><?php echo $movie->rating; ?></span>
+        <span class="badge bg-warning"><?php echo $movie->rating; ?></span>
       </li>
       <?php endforeach; ?>
     </ul>

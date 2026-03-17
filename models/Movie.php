@@ -1,19 +1,13 @@
 <?php 
 
-trait Rating {
-  public $rating = 0;
-
-  public function setRating($newRating) {
-    $this->rating = $newRating;
-  }
-}
+require_once __DIR__ . '/../traits/Rating.php';
 class Movie
 {
   use Rating;
   public $title;
   public $description;
   public $releaseYear;
-  public $duration;
+  private $duration;
   public $genres = [];
 
   function __construct($_title, $_description, $_releaseYear, $_duration, array $_genres)
