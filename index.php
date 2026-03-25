@@ -25,7 +25,7 @@ $scream->setRating(4);
       <li class="list-group-item">
         <strong><?php echo $movie->title; ?></strong><br>
         <small class="text-muted">
-          <?php echo implode(', ', array_map(function ($genre) {
+          <?php echo implode(' - ', array_map(function ($genre) {
             return $genre->name; }, $movie->genres)); ?>
         </small>
         <p class="mb-1"><?php echo $movie->description; ?></p>
